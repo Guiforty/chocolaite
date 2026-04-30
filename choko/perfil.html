@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chokko Melt - Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="screen">
+        <header class="app-header">
+            <div class="header-titles">
+                <h1>Chokko Melt</h1>
+                <p>Meu Perfil</p>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="user-card">
+                <div class="profile-info">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Avatar" class="avatar">
+                    <div class="user-details">
+                        <h2>Maria Silva</h2>
+                        <p class="member-since">Cliente desde 2024</p>
+                        <div class="contact-row"><span>✉</span> maria.silva@email.com</div>
+                        <div class="contact-row"><span>📞</span> (11) 98765-4321</div>
+                        <button class="btn-edit-info" style="background:#d7ccc8; border:none; padding:5px 10px; border-radius:5px; color:#4a362d; margin-top:10px;">📝 Editar informações</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="addresses-section">
+                <div class="section-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h3>Meus Endereços</h3>
+                    <span style="font-size:12px; color:#999;">3 endereços</span>
+                </div>
+                <button class="btn-add-address">+ Adicionar novo endereço</button>
+
+                <div class="address-card">
+                    <div style="display:flex; justify-content:space-between;">
+                        <strong>📍 Casa</strong>
+                        <span class="badge-default">✓ Endereço padrão</span>
+                    </div>
+                    <div style="margin-top:10px; font-size:14px; color:#555;">
+                        <p>Rua das Flores, 123</p>
+                        <p>Jardim Primavera, São Paulo - SP</p>
+                        <p>CEP: 01234-567</p>
+                    </div>
+                    <div class="address-footer">
+                        <button class="btn-outline" onclick="editarEndereco(this)">Editar</button>
+                        <button class="btn-outline-danger" onclick="excluirEndereco(this)">Excluir</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item"><span>🏠</span>Início</a>
+            <a href="#" class="nav-item"><span>📦</span>Pedidos</a>
+            <a href="pedido.html" class="nav-item"><span>🛍️</span>Sacola</a>
+            <a href="perfil.html" class="nav-item active"><span>👤</span>Perfil</a>
+        </nav>
+    </div>
+
+</div>
+
+<div id="modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+        <h3 id="modal-title">Editar Informações</h3>
+        <div id="modal-body">
+            </div>
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="fecharModal()">Cancelar</button>
+            <button class="btn-save" id="btn-salvar-modal">Salvar Alterações</button>
+        </div>
+    </div>
+</div>
+
+<script src="perfil.js"></script>
+</body>
+</html>

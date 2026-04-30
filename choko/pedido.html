@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chokko Melt - Sacola</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="screen">
+        <header class="app-header">
+            <div class="header-titles">
+                <h1>Chokko Melt</h1>
+                <p>Sacola</p>
+            </div>
+        </header>
+
+        <main class="content">
+            <h3 style="margin-bottom:20px;">Meus Pedidos</h3>
+            
+            <section class="cart-card">
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=100" class="item-img">
+                    <div class="item-info">
+                        <h4>Bolo de Chocolate</h4>
+                        <p class="item-price">R$ 25,00</p>
+                    </div>
+                    <div class="quantity-selector">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+
+                <div class="summary" style="font-size:14px; color:#666;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                        <span>Subtotal</span><span>R$ 25,00</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                        <span>Entrega</span><span>R$ 5,00</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; font-weight:700; color:#333; border-top:1px dashed #ccc; padding-top:10px; margin-top:10px;">
+                        <span>Total</span><span>R$ 30,00</span>
+                    </div>
+                </div>
+
+                <button class="btn-finish">Finalizar Pedido</button>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item"><span>🏠</span>Início</a>
+            <a href="#" class="nav-item"><span>📦</span>Pedidos</a>
+            <a href="pedido.html" class="nav-item active"><span>🛍️</span>Sacola</a>
+            <a href="perfil.html" class="nav-item"><span>👤</span>Perfil</a>
+        </nav>
+    </div>
+    <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+        <h3 id="modal-title">Pedido Concluído!</h3>
+        <div id="modal-body">
+            </div>
+        <div class="modal-footer">
+            <button class="btn-save" onclick="location.href='index.html'">Voltar ao Início</button>
+        </div>
+    </div>
+</div>
+    <script src="pedido.js"></script>
+</body>
+</html>

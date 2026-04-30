@@ -1,0 +1,155 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+}
+
+/* --- VARIÁVEIS DE CORES --- */
+:root {
+    --primary-brown: #4a362d; 
+    --light-brown: #d7ccc8;  
+    --green-action: #3a833c;  
+    --bg-color: #fdfcfb;      
+    --white: #ffffff;         
+    --border: #e0e0e0;        
+}
+
+body { 
+    background-color: var(--bg-color); 
+    color: #333; 
+    /* Adicionamos um padding embaixo para o conteúdo não ficar escondido atrás da navbar */
+    padding-bottom: 100px; 
+}
+
+/* --- ESTRUTURA --- */
+.screen {
+    width: 100%;
+    max-width: 1200px; /* Expande no monitor, mas mantém limite para leitura */
+    margin: 0 auto;
+}
+
+/* --- HEADER FIXO NO TOPO --- */
+.app-header {
+    background-color: var(--primary-brown);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.header-titles h1 { font-size: 18px; font-weight: 700; }
+.header-titles p { font-size: 12px; opacity: 0.8; }
+
+/* --- CONTEÚDO --- */
+.content { padding: 30px 20px; }
+
+/* --- CARDS (Ocupando mais espaço no PC) --- */
+.user-card, .cart-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* --- NAVBAR FIXA EMBAIXO (Exatamente como a foto) --- */
+.bottom-nav { 
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    background: white; 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 12px 0; 
+    border-top: 1px solid var(--border);
+    z-index: 9999; /* Garante que fique por cima de tudo */
+}
+
+/* Estilo dos itens do menu */
+.nav-item { 
+    text-decoration: none; 
+    color: #999; 
+    font-size: 11px; 
+    text-align: center; 
+    flex: 1; /* Divide o espaço igualmente entre os 4 itens */
+}
+
+.nav-item span { 
+    display: block; 
+    font-size: 22px; /* Tamanho do ícone/emoji */
+    margin-bottom: 4px;
+}
+
+/* Cor marrom para o item selecionado conforme a imagem */
+.nav-item.active { 
+    color: var(--primary-brown); 
+    font-weight: 700; 
+}
+
+/* --- AJUSTES DE ELEMENTOS --- */
+.avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--primary-brown); margin-right: 20px; }
+.profile-info { display: flex; align-items: center; }
+.btn-add-address { width: 100%; background: var(--primary-brown); color: white; border: none; padding: 15px; border-radius: 8px; margin: 20px 0; font-weight: 600; cursor: pointer; }
+.badge-default { background: var(--green-action); color: white; font-size: 10px; padding: 3px 8px; border-radius: 10px; }
+
+/* Botões de Endereço lado a lado */
+.address-footer { display: flex; gap: 10px; margin-top: 20px; }
+.btn-outline, .btn-outline-danger { flex: 1; background: none; padding: 10px; border-radius: 8px; border: 1px solid var(--primary-brown); color: var(--primary-brown); cursor: pointer; }
+.btn-outline-danger { border-color: #d32f2f; color: #d32f2f; }
+
+/* Carrinho */
+.cart-item { display: flex; align-items: center; gap: 15px; padding-bottom: 20px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+.item-img { width: 70px; height: 70px; border-radius: 8px; }
+.item-price { color: var(--green-action); font-weight: 700; }
+.quantity-selector { margin-left: auto; background: #f0f0f0; padding: 5px 12px; border-radius: 6px; display: flex; gap: 15px; align-items: center; }
+.btn-finish { width: 100%; background: var(--green-action); color: white; border: none; padding: 16px; border-radius: 10px; font-weight: 700; font-size: 16px; margin-top: 20px; cursor: pointer; }
+
+/* --- ESTILO DO MODAL --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro transparente */
+    display: none; /* Escondido por padrão */
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-card {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease; /* Efeito de entrada */
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-card h3 { margin-bottom: 20px; color: var(--primary-brown); }
+
+.modal-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.modal-footer { display: flex; gap: 10px; justify-content: flex-end; }
+
+.btn-cancel { background: none; border: none; color: #777; cursor: pointer; font-weight: 600; }
+.btn-save { 
+    background: var(--green-action); 
+    color: white; border: none; 
+    padding: 10px 20px; border-radius: 8px; 
+    cursor: pointer; font-weight: 600; 
+}
