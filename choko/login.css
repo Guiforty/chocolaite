@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Lily Script One", system-ui;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /*se ajusta a tela do navegador*/
+    background: url(./img/8.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #4E342E;
+    background-color: var(--bg-color); 
+    color: #333; 
+    /* Adicionamos um padding embaixo para o conteúdo não ficar escondido atrás da navbar */
+    padding-bottom: 100px; 
+}
+/* o quadradão lá*/
+.container {
+    width: 420px;
+    background-color: transparent ;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    color:#000000;
+    padding: 30px 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    backdrop-filter: blur(10px); /*bluer no quadradão*/
+}
+/* texto grande do quadrdão lá*/   
+.container h1 {
+    font-size: 46px;
+    text-align: center;
+    color: #4E342E;
+    font-family: "Lily Script One", system-ui; 
+}
+/* Caixa onde está o Usuário e Senha*/
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+}
+/* Caixa onde digita o Usuário e Senha*/
+
+.input-box input  {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-color: #000000;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 40px;
+    outline: black;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 20px 45px 20px 20px;
+    
+    
+}
+/* Texto que fica dentro da caixa (Usuário, Senha)*/
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 30%;
+}
+
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    color: #4E342E;
+    margin: -15px 0 15px;
+
+}
+
+.remember-forgot label input{
+    accent-color: #9b3f21; /* muda a cor da checkboc do "Lembrar Senha"*/
+    margin-right: 5px;    
+}
+
+.remember-forgot a {
+    text-decoration: none; /* tira a cor  que fica abaixo do link*/
+    color: #4E342E;    
+}
+.remember-forgot a:hover {
+  text-decoration: underline; 
+}
+.login{
+color: white;
+margin-top: 20px;
+width: 100%;
+height: 50px;
+background-color: #4E342E;
+border: none;
+border-radius: 30px ;
+cursor: pointer;
+font-size: 16px;
+font-weight: 600;
+box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+.login:hover{
+    background-color: #9b3f21;
+    border: 2px solid rgba(255, 255, 255, .3);
+    transition: 0.8s; /* pro botão LOGIN aparecer devagarinho*/
+}
+
+.register-link {
+    font-size: 14px ;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #9b3f21;
+    font-weight: 500;
+}
